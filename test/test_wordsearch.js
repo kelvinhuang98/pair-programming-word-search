@@ -60,4 +60,42 @@ describe("#wordSearch()", function () {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present backwards horizontally", function () {
+    const result = wordSearch(
+      [
+        ["A", "W", "C", "F", "Q", "U", "A", "L"],
+        ["D", "L", "E", "F", "N", "I", "E", "S"],
+        ["Y", "F", "C", "F", "Q", "U", "A", "L"],
+        ["H", "M", "J", "T", "E", "V", "R", "G"],
+        ["W", "H", "C", "S", "Y", "E", "R", "L"],
+        ["B", "F", "R", "E", "N", "E", "Y", "B"],
+        ["U", "B", "T", "W", "A", "P", "A", "I"],
+        ["O", "D", "C", "A", "K", "U", "A", "S"],
+        ["E", "Z", "K", "F", "Q", "U", "A", "L"],
+      ],
+      "SEINFELD"
+    );
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present backwards vertically", function () {
+    const result = wordSearch(
+      [
+        ["A", "W", "C", "F", "Q", "U", "A", "L"],
+        ["D", "L", "E", "F", "N", "I", "E", "S"],
+        ["Y", "F", "C", "F", "Q", "U", "A", "L"],
+        ["H", "M", "J", "T", "E", "V", "R", "G"],
+        ["O", "H", "C", "S", "Y", "E", "R", "L"],
+        ["L", "F", "R", "E", "N", "E", "Y", "B"],
+        ["L", "B", "T", "W", "A", "P", "A", "I"],
+        ["E", "D", "C", "A", "K", "U", "A", "S"],
+        ["H", "Z", "K", "F", "Q", "U", "A", "L"],
+      ],
+      "HELLO"
+    );
+
+    assert.isTrue(result);
+  });
 });
