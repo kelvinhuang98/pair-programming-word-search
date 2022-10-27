@@ -1,4 +1,4 @@
-const transpose = require("../../async/matrix_transposition");
+const transpose = require("./matrix_transposition");
 
 const wordSearch = (letters, word) => {
   let transposedArray = transpose(letters);
